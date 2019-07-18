@@ -1,8 +1,6 @@
 const app = require('./app');
-
-
-const PORT = process.env.PORT || 8000;
+const { PORT, NODE_ENV } = require('./config');
 
 app.listen(PORT, () => {
-  console.log(`Server is listening at http://localhost:${PORT}`);
+  console.log(`Server is listening at http://localhost:${PORT} in ${NODE_ENV} mode...`);
 });
